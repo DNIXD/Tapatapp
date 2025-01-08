@@ -1,0 +1,58 @@
+classDiagram
+    RelationUserChild <|-- User
+    RelationUserChild <|-- Child
+    RelationUserChild <|-- Rol
+    Tap <|-- User
+    Tap <|-- Status
+    Tap <|-- Child
+    Child <|-- Treatment
+
+
+    class User {
+        -int id
+        -String username
+        -String password
+        -String email
+        -int id_rol
+    }
+
+    class RelationUserChild {
+        -int user_id
+        -int child_id
+        -int rol_id
+    }
+
+    class Child {
+        -int id
+        -String child_name
+        -int sleep_average
+        -int treatment_id
+        -int time
+        +seeTreatment()void
+        +seeTime()void
+        +seeSeleep_Average()void
+    }
+    
+    class Status {
+        -int id
+        -String name
+    }
+
+    class Treatment {
+        -int id
+        -String name
+    }
+
+    class Tap {
+        -int id
+        -int child_id
+        -int status_id
+        -int user_id
+        -String init
+        -String end
+    }
+
+    class Rol {
+        -int id
+        -String type_rol
+    }
