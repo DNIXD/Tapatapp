@@ -12,3 +12,17 @@
 <ul dir="auto" style="text-align: left;color: rgb(29, 33, 37);background-color: rgb(255, 255, 255);font-size: 15px;font-family: Roboto;">
     <li>Controlar el temps que el nen porta el pegat ocular.</li>
     <li>Desenvolupar una aplicaci&oacute; m&ograve;bil per a Android.</li>
+    <li>Diferenciar entre el temps relatiu del pegat per a infants menors de 6 mesos i el temps absolut per a nens m&eacute;s grans de 6 mesos.</li>
+    <li>Crear una aplicaci&oacute; multiusuari que permeti a diversos cuidadors gestionar el control del tractament.</li>
+    <li>Restar el temps que el nen passa adormit.</li>
+    <li>Implementar un sistema intel&middot;ligent (intel&middot;lig&egrave;ncia artificial) amb notificacions per preveure quan el pegat est&agrave; a punt de completar el seu temps.</li>
+</ul>
+<div dir="auto" style="text-align: left;color: rgb(29, 33, 37);background-color: rgb(255, 255, 255);font-size: 15px;font-family: Roboto;">
+    <h2 dir="auto" tabindex="-1" style="font-size: 1.875rem;">Requeriments Funcionals del Projecte</h2><a href="https://github.com/amallad2/tapatapp-dam1-24-25/blob/main/descTapatApp.md#requeriments-del-projecte" style="color: rgb(2, 67, 120);"></a>
+</div>
+<ul dir="auto" style="text-align: left;color: rgb(29, 33, 37);background-color: rgb(255, 255, 255);font-size: 15px;font-family: Roboto;">
+    <li>Servidor per allotjar la part de backend.</li>
+    <li>Desenvolupar el backend de l&apos;aplicaci&oacute; amb serveis web.</li>
+    <li>Desenvolupar el frontend de l&apos;aplicaci&oacute; m&ograve;bil.</li>
+    <li>Possibilitat de crear una web quan l&apos;aplicaci&oacute; estigui en producci&oacute;.</li>
+</ul>
