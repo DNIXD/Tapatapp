@@ -4,4 +4,4 @@ Hola!!
 
 [Descripcion del Proyecto](desTapatapp.md)
 
-[Receriemitnos Tecnicos](dRequerimientosTecnicos.md)
+[Receriemitnos Tecnicos](RequerimientosTecnicos.md)
