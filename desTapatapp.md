@@ -1,4 +1,5 @@
 Descripció del Projecte TapatApp
+
 Una cataracta congènita és l'opacitat del cristal·lí de l'ull present des del naixement. La incidència de cataracta congènita és d'aproximadament 3 de cada 10.000 nens al cap d'un any de vida. A l'Hospital de Sant Joan de Déu s'han operat al voltant de 100 cataractes infantils durant l'últim any. Les cataractes són la causa més freqüent de ceguesa tractable en la infància, i es calcula que hi ha al voltant de 200.000 nens cecs per cataractes arreu del món.
 
 L'ull amb cataracta congènita, un cop operat, ha de seguir un règim exhaustiu de rehabilitació per evitar l'ambliopia, coneguda comunament com a "ull gandul". Aquí és on TapatApp! vol ajudar.
@@ -10,6 +11,7 @@ Durant aquesta etapa, el tractament amb pegat varia en funció de l'edat del nen
 L'objectiu de TapatApp és proporcionar a totes les famílies afectades per cataracta congènita, o per qualsevol patologia que requereixi pegat ocular, una eina senzilla i gratuïta que els ajudi a seguir aquest tractament de manera equilibrada. Això permet obtenir el màxim desenvolupament de l'agudesa visual.
 
 Objectius del Projecte
+
 Controlar el temps que el nen porta el pegat ocular.
 Desenvolupar una aplicació mòbil per a Android.
 Diferenciar entre el temps relatiu del pegat per a infants menors de 6 mesos i el temps absolut per a nens més grans de 6 mesos.
