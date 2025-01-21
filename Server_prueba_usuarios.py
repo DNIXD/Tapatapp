@@ -20,6 +20,7 @@ class DAOUsers:
         for u in listUsers:
             if username == u.username:
                 return u
+        return None
 
 
 listUsers = [
@@ -45,5 +46,15 @@ else:
 def hello():
     return "Hello World"
 
+@app.route('/tapatapp/getuser', methods=['GET'])
+def getuser():
+    n= str(request.args.get('name'))
+    email= str(request.args.get('mail'))
+    return "HelloWorld Name = " + n + " Mail = " + email
+
+@app.route('/prototip/getuser/<string:username>', methods=['GET'])
+def prototip(username):
+    return "Prototip1 1, user: " + username
+
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port="10028")
+    app.run(debug=True, host="0.0.0.0", port="10050")
