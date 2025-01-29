@@ -59,9 +59,14 @@ def getuser():
     return "HelloWorld Name = " + n + " Mail = " + email
 
 
-@app.route('/prototip/getuser/<string:username>', methods=['GET'])
+@app.route('/prototip1/getuser/<string:username>', methods=['GET'])
 def prototip(username):
-    return "Prototip1 1, user: " + username
+    user = daousers.getUserByUsername(username)
+    if user:
+        return jsonify(user.to_dict())
+    if username==None:
+        return jsonify({"error": "Parametro no introducido"}), 400
+    return jsonify({"error": "Ususario no encontrado"}), 404
 
 
 if __name__ == '__main__':
