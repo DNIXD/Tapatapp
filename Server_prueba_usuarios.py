@@ -48,7 +48,7 @@ daousers = DAOUsers()
 def hello():
     user = daousers.getUserByUsername("usuari1")
     if user:
-        return jsonify(user.to_dict())  # Serializa el objeto a un diccionario
+        return jsonify(user.to_dict())
     return jsonify({"error": "User not found"}), 404
 
 

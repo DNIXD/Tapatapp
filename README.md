@@ -24,3 +24,8 @@ Method: GET <br>
 Tipus de petició: Devolvera un html si el usuario exsite y otro si no existe <br>
 Parametres que necessita la petició: El nombre del usuario y algo mas especial o especifico como el correo o la contraseña.<br>
 Resposta: Si existe el usaurio seria algo como, "Bienvenido de vuelta (Nombre de usuario)" si no existe diria algo como "No se ha encontrado al usuario (Nombre de usuario)"
+
+
+| Descripció  | End-point     | Method     |Tipus de petició|Parametres| resposta|
+| :---        |  :---        |  :---        |  :---         |  :---     |  :--- | 
+| Obtenir dades d'un usuari  | /prototip1/getuser|GET | application/json   |  username (string) |  {   "email": "prova@gmail.com",   "id": 1,   "password":  "12345",   "username": "usuari1" }   {error: Usuario no encontrado}, 404   {error: Parametro no introducido}, 400      |
