@@ -1,0 +1,25 @@
+classDiagram   
+    Vista --|> DAO-User: request user data
+    DAO-User --|> User: request user data
+    DAO-User <|-- User: return user data
+    DAO-User <|-- Error: return error if not found data of user
+    DAO-User --|> Vista:  return user data or error
+    
+    class DAO-User{
+        -listUsers
+        +getUserByUsername(username)
+    }
+    class Vista{
+        +showUserInfo(User)
+        +showError(Error)
+    }
+    class User{
+        -username String
+        -email String
+        -password String
+        -id int
+    }
+    class Error{
+        -errorCode int
+        -errorMessage String
+    }
