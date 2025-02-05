@@ -1,0 +1,26 @@
+flowchart TD
+    A[Inicio - Bienvenida] --> B[Login]
+    B -->|Not Registred| C[Pagina Registro]
+    B -->|Contraseña Olvidada| D[Recuperar Contraseña]
+    B --> E[User Home]
+    E -->|If more tha one child| F[Lista Niños]
+    F--> G
+    E --> G[Child Menu]
+    E --> H[User Configuration]
+    E --> I[User Info]
+    C -->|Registred| B
+    D -->|Contraseña Recuperada| B
+    G --> J[Child Info]
+    G --> K[Child Menu Config]
+
+    %%Login: Info form user (username/email, password, login option)
+    %%Registro: User interaction with the app && Info form user (username, name, lastname, email, phone number, password, child name, child lastname, register user option)
+    %%RetrievePassword: User interaction with the app && Info for user (email, verification code, send code option, change password option)
+    %%UserHome: User interaction with the app (access to Userinfo, access to UserConfig)
+    %%UserInfo: Info from server (username, name, lastname, emial, phone number, email, password)
+    %%UserConfig: User interaction with the app (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
+    %%ChildsList: Info from server (child name, child lastname, child unique identifier) User interaction with the app (select child option)
+    %%ChildMenu: User interaction with the app (access to Child Info, accces to Child Menu Config, Add patch time option)
+    %%ChildInfo: Info from server (child name, child lastname, patch time info, child unique identifier, users with access to this info, permissions of users with access)
+    %%ChildMenuConfig: User interaction with the app (change child name option, change child lastname option, change users with access option, change permissions of users with acces option)
+
