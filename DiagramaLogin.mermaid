@@ -13,14 +13,50 @@ flowchart TD
     G --> J[Child Info]
     G --> K[Child Menu Config]
 
-    %%Login: Info form user (username/email, password, login option)
-    %%Registro: User interaction with the app && Info form user (username, name, lastname, email, phone number, password, child name, child lastname, register user option)
-    %%RetrievePassword: User interaction with the app && Info for user (email, verification code, send code option, change password option)
-    %%UserHome: User interaction with the app (access to Userinfo, access to UserConfig)
-    %%UserInfo: Info from server (username, name, lastname, emial, phone number, email, password)
-    %%UserConfig: User interaction with the app (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
-    %%ChildsList: Info from server (child name, child lastname, child unique identifier) User interaction with the app (select child option)
-    %%ChildMenu: User interaction with the app (access to Child Info, accces to Child Menu Config, Add patch time option)
-    %%ChildInfo: Info from server (child name, child lastname, patch time info, child unique identifier, users with access to this info, permissions of users with access)
-    %%ChildMenuConfig: User interaction with the app (change child name option, change child lastname option, change users with access option, change permissions of users with acces option)
+    %%Login: 
+    %%Descripcion: La pagina de login donde el usuario se validara
+    %%Info Entrada: (username/email, password)
+    %%Interacciones: (login option)
+    %%Info Vista: Nada
 
+    %%Registro:
+    %%Descripcion: La pagina de registro donde el suaurio se registarar con sus datos y los datos del niño el cual debe controlar el tiempo del parche
+    %%Info Entrada: (username, name, lastname, email, phone number, password, child name, child lastname)
+    %%Interacciones: (register user option)
+    %%Info Vista: Nada
+
+    %%RetrievePassword: User interaction with the app && Info for user (email, verification code, send code option, change password option)
+    
+    %%UserHome:
+    %%Descripcion: La pagina principal del usario donde podra controlar todo lo relacinado con su cuenta y acceso a la informacion del niño
+    %%Info Entrada: Nada
+    %%Interacciones: (access to Userinfo, access to UserConfig)
+    %%Info Vista: Nada
+
+    %%UserInfo:
+    %%Descripcion: La pagina de informacion del usuario
+    %%Info Entrada: Nada
+    %%Interacciones: Nada
+    %%Info Vista: (username, name, lastname, emial, phone number, email, password)
+
+    %%UserConfig: User interaction with the app (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
+    
+    %%ChildsList: Info from server (child name, child lastname, child unique identifier) User interaction with the app (select child option)
+    
+    %%ChildMenu: User interaction with the app ()
+    %%Descripcion: La pagina principal del niño donde los usuarios con permisos podran controlar todo lo relacinado con la informacion del niño, el tiempo del parche y demas
+    %%Info Entrada: Nada
+    %%Interacciones: (access to Child Info, accces to Child Menu Config, Add patch time option)
+    %%Info Vista: Nada
+
+    %%ChildInfo:
+    %%Descripcion: La pagina donde esta toda la informacion relacionada con el niño
+    %%Info Entrada: Nada
+    %%Interacciones: Nada
+    %%Info Vista: (child name, child lastname, patch time info, child unique identifier, users with access to this info, permissions of users with access)
+
+    %%ChildMenuConfig:
+    %%Descripcion: La pagina donde esta toda la configuracion del lo relacionado con el niño
+    %%Info Entrada: Nada
+    %%Interacciones: (change child name option, change child lastname option, change users with access option, change permissions of users with acces option)
+    %%Info Vista: Nada
