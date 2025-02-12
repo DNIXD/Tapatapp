@@ -2,12 +2,12 @@ flowchart TD
     A[Inicio - Bienvenida] --> B[Login]
     B -->|Not Registred| C[Pagina Registro]
     B -->|Contraseña Olvidada| D[Recuperar Contraseña]
-    B --> E[User Home]
-    E -->|If more tha one child| F[Lista Niños]
-    F--> G
-    E --> G[Child Menu]
-    E --> H[User Configuration]
-    E --> I[User Info]
+    B-->|If more tha one child| F[Lista Niños]
+    B --> G[Menu]
+    F --> G 
+    G --> F
+    G --> H[User Configuration]
+    G --> I[User Info]
     C -->|Registred| B
     D -->|Contraseña Recuperada| B
     G --> J[Child Info]
@@ -20,17 +20,15 @@ flowchart TD
     %%Info Vista: Nada
 
     %%Registro:
-    %%Descripcion: La pagina de registro donde el suaurio se registarar con sus datos y los datos del niño el cual debe controlar el tiempo del parche
-    %%Info Entrada: (username, name, lastname, email, phone number, password, child name, child lastname)
-    %%Interacciones: (register user option)
+    %%Descripcion: La pagina de registro donde el suaurio se registarar con sus datos y/o los datos del niño
+    %%Info Entrada: (username, name, lastname, email, phone number, password y/o child name, child lastname)
+    %%Interacciones: (register user option, register child option)
     %%Info Vista: Nada
 
-    %%RetrievePassword: User interaction with the app && Info for user (email, verification code, send code option, change password option)
-    
-    %%UserHome:
-    %%Descripcion: La pagina principal del usario donde podra controlar todo lo relacinado con su cuenta y acceso a la informacion del niño
-    %%Info Entrada: Nada
-    %%Interacciones: (access to Userinfo, access to UserConfig)
+    %%RetrievePassword: 
+    %%Descripcion: La pagina de recuperacion de contraseña, aqui utilizando el correo afiliado a tu cuenta mandaras un codigo de verificacion para luego poder cambiar tu contraseña
+    %%Info Entrada: (email, verification code)
+    %%Interacciones: (send code option, change password option)
     %%Info Vista: Nada
 
     %%UserInfo:
@@ -39,14 +37,22 @@ flowchart TD
     %%Interacciones: Nada
     %%Info Vista: (username, name, lastname, emial, phone number, email, password)
 
-    %%UserConfig: User interaction with the app (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
-    
-    %%ChildsList: Info from server (child name, child lastname, child unique identifier) User interaction with the app (select child option)
-    
-    %%ChildMenu: User interaction with the app ()
-    %%Descripcion: La pagina principal del niño donde los usuarios con permisos podran controlar todo lo relacinado con la informacion del niño, el tiempo del parche y demas
+    %%UserConfig:
+    %%Descripcion: La pagina de configuracion del usuario, dodne podra cambair todo lo relacionado con el usuario en si y no con le niño
     %%Info Entrada: Nada
-    %%Interacciones: (access to Child Info, accces to Child Menu Config, Add patch time option)
+    %%Interacciones: (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
+    %%Info Vista: Nada
+
+    %%ChildsList:
+    %%Descripcion: La pagina de la lista de niños de los cuales tiene accesso el usuario
+    %%Info Entrada: Nada
+    %%Interacciones: (select child option)
+    %%Info Vista: (child name, child lastname, child unique identifier)
+
+    %%Menu: 
+    %%Descripcion: La pagina principal del usuario donde tiene acceso a su porpio infromacion y configuracion con tambien acceso a la infromacion del niño, opciones para añadir el tiempo del parche y configuraciones relacioanda con el niño
+    %%Info Entrada: Nada
+    %%Interacciones: (access to Child Info, accces to Child Menu Config, Add patch time option, access to Userinfo, access to UserConfig)
     %%Info Vista: Nada
 
     %%ChildInfo:

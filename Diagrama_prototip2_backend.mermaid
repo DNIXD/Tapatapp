@@ -1,0 +1,53 @@
+classDiagram   
+    Vista --|> DAOUsers: request user data
+    Vista --|> DAOChilds: request child data
+    Vista --|> DAOTaps: request tap data
+    DAOUsers --|> User: request user data
+    DAOUsers <|-- User: return user data
+    DAOUsers --|> Vista:  return user data
+    DAOChilds --|> Child: request child data
+    DAOChilds <|-- Child: return child data
+    DAOChilds --|> Vista:  return child data
+    DAOTaps --|> Taps: request tap data
+    DAOTaps <|-- Taps: return tap data
+    DAOTaps --|> Vista:  return tap data
+    
+    class DAOUsers{
+        -listUsers
+        +getUserByUserID(id)
+    }
+    class DAOChilds{
+        -listChilds
+        +getChildByUserID(id)
+    }
+    class DAOTaps{
+        -listTaps
+        +getTapByChildID(child_id)
+    }
+    class Vista{
+        +showUserInfo(User)
+        +showChildInfo(Child)
+        +showTapInfo(Tap)
+    }
+    class User{
+        -id int
+        -username String
+        -email String
+        -password String
+    }
+    class Child{
+        -child_id int
+        -child_name string
+        -sleep_average int
+        -treatment_id int
+        -patch_time int
+        -state String
+    }
+    class Taps{
+        -id int
+        -child_id int
+        -status_id int
+        -user_id int
+        -init Date
+        -end Date
+    }
