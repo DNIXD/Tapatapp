@@ -1,13 +1,4 @@
 import Server_prototipo2_datos as dades
-
-# Exemple d'ús de la llista d'usuaris
-#for x in dades.users:
-#    print(x)
-
-# Exemple d'ús de la classe User
-#a= User(id=1, username="Kurl", password="12345", email="prova2@gmail.com")
-#print(a)
-
 class DAOUsers:
     def __init__(self):
         self.users = dades.users
