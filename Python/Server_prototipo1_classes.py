@@ -12,7 +12,7 @@ class User:
 
 class UserDAO:
     def get_user_by_username(username):
-        response = requests.get(f'http://localhost:10050/prototip1/getuser?username={username}')
+        response = requests.get(f'http://localhost:10050/prototip1/getuser/{username}')
         if response.status_code == 200:
             user_data = response.json()
             user = User(user_data['id'], user_data['username'], user_data['password'], user_data['email'])
