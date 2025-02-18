@@ -1,9 +1,0 @@
-flowchart TD
-    A[Vista Cliente - Login username] -->|Envia datos| B[Cliente - DAO Usuario]
-    B -->|Petición HTTP| C[Servidor Web]
-    C -->|Valida datos| D[DAO Usuarios]
-    D -->|Consulta datos| E[Base de Datos]
-    E -->|Responde datos| D
-    D -->|Devuelve datos| C
-    C -->|Respuesta HTTP| B
-    B -->|Datos procesados| F[Vista Cliente - Info Infante]
