@@ -1,68 +1,68 @@
 # Prototipo2
 ## Wireframes de toda la App
     
-    ![WireFrames](/img/WireFrames.PNG)
+![WireFrames](/img/WireFrames.PNG)
 
-    Login: 
-    Descripcion: La pagina de login donde el usuario se validara
-    Info Entrada: (username/email, password)
-    Interacciones: (login option)
-    Info Vista: Nada
+Login: 
+Descripcion: La pagina de login donde el usuario se validara
+Info Entrada: (username/email, password)
+Interacciones: (login option)
+Info Vista: Nada
 
-    Registro:
-    Descripcion: La pagina de registro donde el suaurio se registarar con sus datos y/o los datos del niño
-    Info Entrada: (username, name, lastname, email, phone number, password y/o child name, child lastname)
-    Interacciones: (register user option, register child option)
-    Info Vista: Nada
+Registro:
+Descripcion: La pagina de registro donde el suaurio se registarar con sus datos y/o los datos del niño
+Info Entrada: (username, name, lastname, email, phone number, password y/o child name, child lastname)
+Interacciones: (register user option, register child option)
+Info Vista: Nada
 
-    Recuperar Contraseña: 
-    Descripcion: La pagina de recuperacion de contraseña, aqui utilizando el correo afiliado a tu cuenta mandaras un codigo de verificacion para luego poder cambiar tu contraseña
-    Info Entrada: (email, verification code)
-    Interacciones: (send code option, change password option)
-    Info Vista: Nada
+Recuperar Contraseña: 
+Descripcion: La pagina de recuperacion de contraseña, aqui utilizando el correo afiliado a tu cuenta mandaras un codigo de verificacion para luego poder cambiar tu contraseña
+Info Entrada: (email, verification code)
+Interacciones: (send code option, change password option)
+Info Vista: Nada
 
-    User Info:
-    Descripcion: La pagina de informacion del usuario
-    Info Entrada: Nada
-    Interacciones: Nada
-    Info Vista: (username, name, lastname, emial, phone number, email, password)
+User Info:
+Descripcion: La pagina de informacion del usuario
+Info Entrada: Nada
+Interacciones: Nada
+Info Vista: (username, name, lastname, emial, phone number, email, password)
 
-    User Config:
-    Descripcion: La pagina de configuracion del usuario, dodne podra cambair todo lo relacionado con el usuario en si y no con le niño
-    Info Entrada: Nada
-    Interacciones: (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
-    Info Vista: Nada
+User Config:
+Descripcion: La pagina de configuracion del usuario, dodne podra cambair todo lo relacionado con el usuario en si y no con le niño
+Info Entrada: Nada
+Interacciones: (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option)
+Info Vista: Nada
 
-    Childs List:
-    Descripcion: La pagina de la lista de niños de los cuales tiene accesso el usuario
-    Info Entrada: Nada
-    Interacciones: (select child option)
-    Info Vista: (child name, child lastname, child unique identifier)
+Childs List:
+Descripcion: La pagina de la lista de niños de los cuales tiene accesso el usuario
+Info Entrada: Nada
+Interacciones: (select child option)
+Info Vista: (child name, child lastname, child unique identifier)
 
-    Menu: 
-    Descripcion: La pagina principal del usuario donde tiene acceso a su porpio infromacion y configuracion con tambien acceso a la infromacion del niño, opciones para añadir el tiempo del parche y configuraciones relacioanda con el niño
-    Info Entrada: Nada
-    Interacciones: (access to Child Info, accces to Child Menu Config, Add patch time option, access to Userinfo, access to UserConfig)
-    Info Vista: Nada
+Menu: 
+Descripcion: La pagina principal del usuario donde tiene acceso a su porpio infromacion y configuracion con tambien acceso a la infromacion del niño, opciones para añadir el tiempo del parche y configuraciones relacioanda con el niño
+Info Entrada: Nada
+Interacciones: (access to Child Info, accces to Child Menu Config, Add patch time option, access to Userinfo, access to UserConfig)
+Info Vista: Nada
 
-    Child Info:
-    Descripcion: La pagina donde esta toda la informacion relacionada con el niño
-    Info Entrada: Nada
-    Interacciones: Nada
-    Info Vista: (child name, child lastname, patch time info, child unique identifier, users with access to this info, permissions of users with access)
+Child Info:
+Descripcion: La pagina donde esta toda la informacion relacionada con el niño
+Info Entrada: Nada
+Interacciones: Nada
+Info Vista: (child name, child lastname, patch time info, child unique identifier, users with access to this info, permissions of users with access)
 
-    Child MenuConfig:
-    Descripcion: La pagina donde esta toda la configuracion del lo relacionado con el niño
-    Info Entrada: Nada
-    Interacciones: (change child name option, change child lastname option, change users with access option, change permissions of users with acces option)
-    Info Vista: Nada
+Child MenuConfig:
+Descripcion: La pagina donde esta toda la configuracion del lo relacionado con el niño
+Info Entrada: Nada
+Interacciones: (change child name option, change child lastname option, change users with access option, change permissions of users with acces option)
+Info Vista: Nada
 
 ## Descripcion de implementacion Prototipo2
-    En este prototipo2, se implementara un sistema de Login y register que permitira registarte he iniciar sesion con un nombre de usuario contraseña y otras infromacion, para luego, a partir de la infromacion del usuario, ver la informacion del niño con los taps.
+En este prototipo2, se implementara un sistema de Login y register que permitira registarte he iniciar sesion con un nombre de usuario contraseña y otras infromacion, para luego, a partir de la infromacion del usuario, ver la informacion del niño con los taps.
 ## Diagrama Arquitectura Prototipo2
 
 ## Diagrama classes FrontEnd y BackEnd
 ### Diagrama FrontEnd
-    ![DiagramaFrontEnd](/img/DiagramaFrontEnd.PNG)
+![DiagramaFrontEnd](/img/DiagramaFrontEnd.PNG)
 ### Diagrama BackEnd
-    ![DiagramaFrontEnd](/img/DiagramaBackEnd.PNG)
+![DiagramaFrontEnd](/img/DiagramaBackEnd.PNG)
