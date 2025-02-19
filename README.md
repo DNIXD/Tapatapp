@@ -29,3 +29,8 @@ Resposta: Si existe el usaurio seria algo como, "Bienvenido de vuelta (Nombre de
 | Descripción  | End-point     | Method     |Tipo de petición|Parametros| Respuesta|
 | :---        |  :---        |  :---        |  :---         |  :---     |  :--- | 
 | Obtener datos de un usuario  | /prototip1/getuser|GET | application/json   |  username (string) |  Codigo 200: {"email": "prueba@gmail.com",   "id": 1,   "password":  "12345",   "username": "usuari1" } Codigo 404: {error: Usuario no encontrado} Codigo 400: {error: Parametro no introducido}     |
+<br>
+
+
+## Prototipo 2
+[Prototipo2](prototip2.md)
