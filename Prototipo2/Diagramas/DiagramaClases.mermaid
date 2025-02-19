@@ -13,15 +13,15 @@ classDiagram
     }
     class DAOUsers{
         -listUsers
-        +getUserByUserID(id)
+        +getUserByUsername(username)
     }
     class DAOChilds{
         -listChilds
-        +getChildByUserID(id)
+        +getChildByUsername(username)
     }
     class DAOTaps{
         -listTaps
-        +getTapByChildID(child_id)
+        +getTapByChild(child_name, username)
     }
     class User{
         -username String
