@@ -1,16 +1,16 @@
 classDiagram   
-    Vista --|> DAOUsers: request user data
-    Vista --|> DAOChilds: request child data
-    Vista --|> DAOTaps: request tap data
+    Web_Service --|> DAOUsers: request user data
+    Web_Service --|> DAOChilds: request child data
+    Web_Service --|> DAOTaps: request tap data
     DAOUsers --|> User: request user data
     DAOUsers <|-- User: return user data
-    DAOUsers --|> Vista:  return user data
+    DAOUsers --|> Web_Service:  return user data
     DAOChilds --|> Child: request child data
     DAOChilds <|-- Child: return child data
-    DAOChilds --|> Vista:  return child data
+    DAOChilds --|> Web_Service:  return child data
     DAOTaps --|> Taps: request tap data
     DAOTaps <|-- Taps: return tap data
-    DAOTaps --|> Vista:  return tap data
+    DAOTaps --|> Web_Service:  return tap data
     
     class DAOUsers{
         -listUsers
@@ -24,7 +24,7 @@ classDiagram
         -listTaps
         +getTapByChildID(child_id)
     }
-    class Vista{
+    class Web_Service{
         +showUserInfo(User)
         +showChildInfo(Child)
         +showTapInfo(Tap)

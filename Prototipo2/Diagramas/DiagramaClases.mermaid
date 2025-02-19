@@ -1,0 +1,42 @@
+classDiagram
+    Vista --|> DAOChilds
+    Vista --|> DAOUsers
+    Vista --|> DAOTaps
+    DAOChilds --|> Child
+    DAOUsers --|> User
+    DAOTaps --|> Taps
+
+    class Vista{
+        +IniciarSession(username,password)
+        +RegisterAcount(username,password,email,childname,childage)
+        +ShowChildInfo(childname,username)
+    }
+    class DAOUsers{
+        -listUsers
+        +getUserByUserID(id)
+    }
+    class DAOChilds{
+        -listChilds
+        +getChildByUserID(id)
+    }
+    class DAOTaps{
+        -listTaps
+        +getTapByChildID(child_id)
+    }
+    class User{
+        -username String
+        -email String
+        -password String
+    }
+    class Child{
+        -child_name string
+        -sleep_average int
+        -treatment_id int
+        -patch_time int
+        -state String
+    }
+    class Taps{
+        -status_id int
+        -init Date
+        -end Date
+    }
