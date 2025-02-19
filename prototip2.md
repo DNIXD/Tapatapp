@@ -66,6 +66,6 @@ En este prototipo2, se implementara un sistema de Login y register que permitira
 ![ArquitecturaBackEnd](/img/Arquitectura_Backend.PNG)
 ## Diagrama classes FrontEnd y BackEnd
 ### Diagrama FrontEnd
-![DiagramaFrontEnd](/img/DiagramaFrontEnd.PNG)
+![DiagramaFrontEnd](/img/DiagramaFrontEndV2.PNG)
 ### Diagrama BackEnd
 ![DiagramaFrontEnd](/img/DiagramaBackEnd.PNG)
