@@ -12,15 +12,12 @@ classDiagram
         +ShowChildInfo(childname,username)
     }
     class DAOUsers{
-        -listUsers
         +getUserByUsername(username)
     }
     class DAOChilds{
-        -listChilds
         +getChildByUsername(username)
     }
     class DAOTaps{
-        -listTaps
         +getTapByChild(child_name, username)
     }
     class User{
