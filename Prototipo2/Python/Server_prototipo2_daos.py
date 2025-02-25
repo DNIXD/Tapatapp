@@ -1,4 +1,4 @@
-import Prototipo2.Python.Server_prototipo2_datos as dades
+import Server_prototipo2_datos as dades
 class DAOUsers:
     def __init__(self):
         self.users = dades.users
