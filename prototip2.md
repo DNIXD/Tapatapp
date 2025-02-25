@@ -28,7 +28,7 @@ Interacciones: Nada <br>
 Info Vista: (username, name, lastname, emial, phone number, email, password) 
 
 User Config: <br>
-Descripcion: La pagina de configuracion del usuario, dodne podra cambair todo lo relacionado con el usuario en si y no con le niño <br>
+Descripcion: La pagina de configuracion del usuario, donde podra cambiar todo lo relacionado con el usuario en si y no con le niño <br>
 Info Entrada: Nada <br>
 Interacciones: (change username option, change name option, change lastname option, change email option, change phone number option, change pasword option) <br>
 Info Vista: Nada
