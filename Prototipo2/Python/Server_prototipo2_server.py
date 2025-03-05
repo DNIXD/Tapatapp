@@ -38,5 +38,24 @@ def get_children(user_id):
 
     return jsonify(children_info)
 
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+    email = data.get('email')
+
+    if not username or not password or not email:
+        return jsonify({"error": "Faltan datos"}), 400
+    
+    user = next((u for u in dao_users.users if u.username == username and u.password == password and u.email == email), None)
+
+    if any(u.username == username for u in dao_users.users):
+        return jsonify({"error": "El usuario ya existe"}), 400
+    
+    dao_users.users.append(id=len(dao_users.users) + 1, username=user.username, password=user.password, email=user.email)
+
+    return jsonify({"message": "Usuario registrado exitosamente"}), 201
+
 if __name__ == '__main__':
     app.run(debug=True)
