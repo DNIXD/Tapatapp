@@ -6,12 +6,23 @@ sequenceDiagram
     
     %% Inicio de sesion
     Usuario->>App: Credenciales de acceso
-    App->>Servidor/WebService: Credenciales de acceso
+    App->>Servidor/WebService: Mandar credenciales de acceso
     Servidor/WebService->>BBDD: Validació de credenciales
     alt Credenciales validas
-    BBDD-->>Servidor/WebService: Confirmar credenciales
+    BBDD-->>Servidor/WebService: Crendenciales validas
+    Servidor/WebService-->>App: Credenciales validas
+    App-->>Usuario: Inicar sesion
+    App-->>Usuario: Asignar token a usuario
     else Credenciales invalidas
-    BBDD-->>Servidor/WebService: Rechazar credenciales
+    BBDD-->>Servidor/WebService: Credenciales invalidas
+    Servidor/WebService-->>App: Credenciales invalidas
+    App-->>Usuario: Lanza mensaje de error
     end
-    Servidor/WebService-->>App: Confirmar credenciales
-    App-->>Usuario: Confirmar credenciales
+
+    %% Inicio de session post primera vez
+    Usuario->>App: Token
+    App->>Servidor/WebService: Mandar Token
+    Servidor/WebService->>BBDD: Verificar Token
+    BBDD-->>Servidor/WebService: Token Verificado
+    Servidor/WebService-->>App: Incio de sesion por token confirmado
+    App-->>Usuario: Inciar sesion Automaticamente
