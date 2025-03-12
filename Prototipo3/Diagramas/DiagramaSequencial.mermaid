@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Usuario
+    participant App
+    participant Servidor/WebService
+    participant BBDD
+    
+    %% Inicio de sesion
+    Usuario->>App: Credenciales de acceso
+    App->>Servidor/WebService: Credenciales de acceso
+    Servidor/WebService->>BBDD: Validació de credenciales
+    alt Credenciales validas
+    BBDD-->>Servidor/WebService: Confirmar credenciales
+    else Credenciales invalidas
+    BBDD-->>Servidor/WebService: Rechazar credenciales
+    end
+    Servidor/WebService-->>App: Confirmar credenciales
+    App-->>Usuario: Confirmar credenciales
