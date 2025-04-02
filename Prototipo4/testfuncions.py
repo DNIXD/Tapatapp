@@ -7,3 +7,10 @@ def divideix(a, b):
     if b == 0:
         return "Error: divisió per zero"
     return a / b
+
+print("Test de la funció divideix")
+print("Test 1: ", divideix(10, 2))
+print("Test 2: ", divideix(10, 0))
+
+print("Test de la funció resta")
+print("Test 1: ", resta(10, 2))
