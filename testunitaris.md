@@ -47,6 +47,7 @@ Curva de aprendizaje elevada, debido sobre todo al cambio de paradigma en nuestr
 ## Funcionamiento de unittest
 
 Qué es:<br>
+
 Framework de pruebas unitarias incluido en Python (inspirado en JUnit).<br>
 
 Estructura básica:<br>
@@ -56,6 +57,7 @@ import unittest<br>
 class TestEjemplo(unittest.TestCase):<br>
     def test_algo(self):<br>
         self.assertEqual(1 + 1, 2)<br>
+
 3 partes clave:<br>
 
 TestCase: Clases que contienen los tests (heredan de unittest.TestCase)<br>
@@ -73,10 +75,14 @@ setUpClass()/tearDownClass(): Para toda la clase de tests<br>
 Cómo ejecutar:<br>
 
 python -m unittest archivo_test.py<br>
+
 o desde el código:<br>
+
 if __name__ == '__main__':<br>
     unittest.main()<br>
+
 Ventajas:<br>
+
 Incluido en Python (no requiere instalación extra)<br>
 Estructura clara y organizada<br>
 Integración con herramientas CI/CD<br>
