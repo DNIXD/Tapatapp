@@ -88,3 +88,103 @@ Estructura clara y organizada<br>
 Integración con herramientas CI/CD<br>
 
 Ideal para: Proyectos que necesitan pruebas mantenibles y escalables.<br>
+
+## Lista de las assertions más importantes en unittest
+
+### Assertions básicos:
+
+assertEqual(a, b)<br>
+
+Verifica que a == b<br>
+
+Ejemplo: self.assertEqual(resultado, esperado)<br>
+
+assertNotEqual(a, b)<br>
+
+Comprueba que a != b<br>
+
+assertTrue(x)<br>
+
+Verifica que x es True<br>
+
+Ejemplo: self.assertTrue(usuario.activo)<br>
+
+assertFalse(x)<br>
+
+Comprueba que x es False<br>
+
+### Assertions de identidad y tipos:
+
+assertIs(a, b)<br>
+
+Verifica que a is b (mismo objeto en memoria)<br>
+
+Ejemplo: self.assertIs(instancia, Singleton.instancia)<br>
+
+assertIsNot(a, b)<br>
+
+Comprueba que a is not b<br>
+
+assertIsNone(x)<br>
+
+Verifica que x is None<br>
+
+assertIsNotNone(x)<br>
+
+Comprueba que x no es None<br>
+
+assertIsInstance(obj, clase)<br>
+
+Verifica que obj es instancia de clase<br>
+
+Ejemplo: self.assertIsInstance(usuario, Usuario)<br>
+
+### Assertions para colecciones:
+
+assertIn(a, b)<br>
+
+Verifica que a está en b (listas, diccionarios, etc.)<br>
+
+Ejemplo: self.assertIn("admin", roles)<br>
+
+assertNotIn(a, b)<br>
+
+Comprueba que a no está en b<br>
+
+assertListEqual(a, b)<br>
+
+Compara dos listas (orden y elementos)<br>
+
+Variantes: assertDictEqual, assertSetEqual <br>
+
+### Assertions para excepciones:
+
+assertRaises(Excepción, función, *args)<br>
+
+Verifica que función(*args) lanza la excepción<br>
+
+Ejemplo:<br>
+
+with self.assertRaises(ValueError):<br>
+    int("no_es_un_numero")<br>
+assertRaisesRegex(Excepción, regex, función, *args)<br>
+
+Comprueba la excepción y que el mensaje coincide con el patrón<br>
+
+### Assertions avanzados:
+
+assertAlmostEqual(a, b, places=7)<br>
+
+Compara números flotantes (redondeando a places decimales)<br>
+
+Ejemplo: self.assertAlmostEqual(0.1 + 0.2, 0.3, places=5)<br>
+
+assertGreater(a, b) / assertLess(a, b)<br>
+
+Verifica a > b o a < b<br>
+
+assertCountEqual(a, b)<br>
+
+Comprueba que a y b tienen los mismos elementos (sin importar orden)<br>
+
+Ejemplo: self.assertCountEqual([1, 2], [2, 1])<br>
