@@ -164,9 +164,10 @@ assertRaises(Excepción, función, *args)<br>
 Verifica que función(*args) lanza la excepción<br>
 
 Ejemplo:<br>
-
-with self.assertRaises(ValueError):<br>
-    int("no_es_un_numero")<br>
+```
+with self.assertRaises(ValueError):
+    int("no_es_un_numero")
+```
 assertRaisesRegex(Excepción, regex, función, *args)<br>
 
 Comprueba la excepción y que el mensaje coincide con el patrón<br>
