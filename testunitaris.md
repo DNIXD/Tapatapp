@@ -53,11 +53,11 @@ Framework de pruebas unitarias incluido en Python (inspirado en JUnit).<br>
 Estructura básica:<br>
 
 import unittest<br>
-
-class TestEjemplo(unittest.TestCase):<br>
-    def test_algo(self):<br>
-        self.assertEqual(1 + 1, 2)<br>
-
+```
+class TestEjemplo(unittest.TestCase):
+    def test_algo(self):
+        self.assertEqual(1 + 1, 2)
+```
 3 partes clave:<br>
 
 TestCase: Clases que contienen los tests (heredan de unittest.TestCase)<br>
@@ -73,14 +73,14 @@ setUp()/tearDown(): Preparar/limpiar antes/después de cada test<br>
 setUpClass()/tearDownClass(): Para toda la clase de tests<br>
 
 Cómo ejecutar:<br>
-
+```
 python -m unittest archivo_test.py<br>
-
+```
 o desde el código:<br>
-
-if __name__ == '__main__':<br>
-    unittest.main()<br>
-
+```
+if __name__ == '__main__':
+    unittest.main()
+```
 Ventajas:<br>
 
 Incluido en Python (no requiere instalación extra)<br>
