@@ -1,6 +1,6 @@
 # Test Unitarios
 ## Que son los test unitarios?
-Los test unitarios son un codigo que verifica la precision de una pequeña parte de otro codigo<br> ç
+Los test unitarios son un codigo que verifica la precision de una pequeña parte de otro codigo<br>
 normalmente siendo este codigo a comprobar una funcion o metodo<br>
 
 ## Herrameintas de test unitario para python 
