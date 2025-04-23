@@ -37,7 +37,6 @@ def cargar_token():
             # Validación de campos esenciales
             if all(key in data for key in ['token', 'user_id', 'username']):
                 return data
-            # print("[!] Token corrupto - faltan campos esenciales")
             return None
     except json.JSONDecodeError:
         print("[!] Token corrupto - formato JSON inválido")
@@ -64,7 +63,7 @@ def mostrar_info_ninos(children):
     print("\n=== INFORMACIÓN DE NIÑOS ===")
     for child in children:
         print(f"\n• ID: {child['id']}")
-        print(f"• Nombre: {child['name']}")
+        print(f"• Nombre: {child['child_name']}")
         print(f"• Horas de sueño: {child['sleep_average']}")
         
         if child["taps"]:
@@ -103,37 +102,6 @@ def registrar_usuario():
 
 def iniciar_sesion():
     """Maneja todo el proceso de autenticación"""
-    saved_token = cargar_token()
-    
-    # Opción para continuar sesión existente
-    if saved_token:
-        print("\n[!] Sesión guardada encontrada")
-        print(f"Usuario: {saved_token.get('username')}")
-        
-        opcion = input("\n1. Continuar con esta sesión\n2. Iniciar con otra cuenta\nOpción: ").strip()
-        
-        if opcion == "1":
-            try:
-                response = requests.post(
-                    f"{BASE_URL}/login",
-                    json={"token": saved_token['token']},
-                    timeout=5
-                )
-                
-                if response.status_code == 200:
-                    new_data = response.json()
-                    if guardar_token(new_data):
-                        print("\n[+] Sesión reanudada correctamente")
-                        return True
-                    else:
-                        print("\n[!] No se pudo guardar el nuevo token")
-                else:
-                    error_msg = response.json().get('error', 'Error validando token')
-                    print(f"\n[!] {error_msg}")
-            except requests.exceptions.RequestException as e:
-                print(f"\n[!] Error de conexión: {str(e)}")
-    
-    # Login tradicional
     print("\n=== INICIO DE SESIÓN ===")
     username = input("Usuario: ").strip()
     password = input("Contraseña: ").strip()
@@ -181,13 +149,15 @@ def menu_control_niños():
         try:
             if opcion == "1":
                 response = requests.get(
-                    f"{BASE_URL}/getchildren/{token_data['user_id']}",
+                    f"{BASE_URL}/getchildren",
                     headers=headers,
                     timeout=5
                 )
                 
                 if response.status_code == 200:
                     mostrar_info_ninos(response.json())
+                elif response.status_code == 404:
+                    print("\n[!] No hay niños asociados a este usuario")
                 else:
                     error_msg = response.json().get('error', 'Error al obtener niños')
                     print(f"\n[!] {error_msg}")
@@ -195,10 +165,11 @@ def menu_control_niños():
             elif opcion == "2":
                 print("\n=== AÑADIR NIÑO ===")
                 nombre = input("Nombre del niño: ").strip()
+                sleep_average = input("Promedio de horas de sueño: ").strip()
                 
                 response = requests.post(
                     f"{BASE_URL}/children",
-                    json={"name": nombre},
+                    json={"name": nombre, "sleep_average": sleep_average},
                     headers=headers,
                     timeout=5
                 )
@@ -213,7 +184,7 @@ def menu_control_niños():
                 print("\n=== AÑADIR TAP ===")
                 child_id = input("ID del niño: ").strip()
                 init = input("Fecha inicio (YYYY-MM-DDTHH:MM:SS): ").strip()
-                end = input("Fecha fin (opcional): ").strip() or None
+                end = input("Fecha fin (YYYY-MM-DDTHH:MM:SS, opcional): ").strip() or None
                 
                 response = requests.post(
                     f"{BASE_URL}/taps",
@@ -244,11 +215,6 @@ def menu_control_niños():
 
 def menu_principal():
     """Menú principal de la aplicación"""
-    # Verificar token al inicio
-    token_data = cargar_token()
-    if token_data:
-        print(f"\n[!] Token de sesión encontrado para: {token_data['username']}")
-    
     while True:
         print("\n=== MENÚ PRINCIPAL ===")
         print("1. Iniciar sesión")
@@ -278,13 +244,4 @@ def menu_principal():
 # ======================
 
 if __name__ == "__main__":
-    # Configuración inicial del archivo de token
-    try:
-        if not TOKEN_FILE.exists():
-            with open(TOKEN_FILE, 'w') as f:
-                json.dump({}, f)
-            os.chmod(TOKEN_FILE, 0o600)
-    except Exception as e:
-        print(f"[!] Error inicializando archivo de token: {str(e)}")
-    
     menu_principal()
