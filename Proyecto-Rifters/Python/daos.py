@@ -210,6 +210,26 @@ class DAODecks:
             cursor.close()
             conn.close()
 
+    def getCardsByDeck(self, deck_id):
+        """Obtiene las cartas de un mazo"""
+        conn = self._get_connection()
+        cursor = conn.cursor(dictionary=True)
+        try:
+            query = """
+                SELECT c.*, mc.quantity 
+                FROM cartas c
+                JOIN mazo_cartas mc ON c.id = mc.card_id
+                WHERE mc.deck_id = %s
+            """
+            cursor.execute(query, (deck_id,))
+            return cursor.fetchall()
+        except mysql.connector.Error as err:
+            print(f"Error al obtener cartas del mazo: {err}")
+            return None
+        finally:
+            cursor.close()
+            conn.close()
+
 
 class DAOMatches:
     def __init__(self):
